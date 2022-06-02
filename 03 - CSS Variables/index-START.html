@@ -18,7 +18,7 @@
     <input id="base" type="color" name="base" value="#ffc600">
 
     <label for="height">Height</label>
-    <input class="height" id="height" type="range" min="100" max="700" name="height" value="900" data-sizing="px">
+    <input class="height" id="height" type="range" min="100" max="700" name="height" value="400" data-sizing="px">
   </div>
 
   <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
@@ -82,7 +82,7 @@
     }
 
     inputs.forEach(input => input.addEventListener('change', handleUpdate));
-    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+    // inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
 
   </script>
 

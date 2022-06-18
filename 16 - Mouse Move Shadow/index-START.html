@@ -18,6 +18,7 @@
 
   body {
     margin: 0;
+    background: rgb(131, 130, 130);
   }
 
   .hero {
@@ -52,9 +53,12 @@
       y = y + e.target.offsetTop;
     }
 
-    const xWalk = Math.round((x / width * walk) - (walk / 2));
+    console.log(x, y);
+
+    // const xWalk = Math.round((x / width * walk) - (walk / 2));
+    const xWalk = Math.round(x / width * walk) - (walk / 2);
     const yWalk = Math.round((y / height * walk) - (walk / 2));
-    console.log(xWalk, yWalk);
+    // console.log(xWalk, yWalk);
 
     text.style.textShadow = `${xWalk}px ${yWalk}px 0 red`;
 

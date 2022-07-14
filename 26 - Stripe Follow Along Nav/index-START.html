@@ -102,6 +102,7 @@
   nav {
     position: relative;
     perspective: 600px;
+    background: rgba(204, 204, 204, 0.281);
   }
 
   .cool > li > a {
@@ -190,6 +191,8 @@
     margin-right: 20px;
   }
 
+
+  
   .courses {
     min-width: 300px;
   }
@@ -238,7 +241,9 @@
     const dropdown = this.querySelector('.dropdown');
     const dropdownCoords = dropdown.getBoundingClientRect();
     const navCoords = nav.getBoundingClientRect();
-    // console.log(dropdownCoords);
+    console.log("The dropdown coords are");
+    console.log(dropdownCoords);
+    console.log("The nav coords are");
     console.log(navCoords);
 
     const coords = {

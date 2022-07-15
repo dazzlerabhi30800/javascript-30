@@ -44,7 +44,7 @@
   slider.addEventListener('mousedown', (e) => {
     isDown = true;
     slider.classList.add('active');
-    startX = e.pageX - slider.offsetLeft;
+    startX = e.pageX - slider.offsetLeft; // it is the starting position
     scrollLeft = slider.scrollLeft;
     console.log(scrollLeft);
     // console.log(startX);
@@ -60,9 +60,9 @@
   slider.addEventListener('mousemove', (e) => {
     if(!isDown) return; // Stop the function from running
     e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
+    const x = e.pageX - slider.offsetLeft; // where it is moving and it's current position
     // console.log({x, startX});
-    const walk = (x - startX) * 1.5;
+    const walk = x - startX; // how far we have move from the initial position
     slider.scrollLeft = scrollLeft - walk;
     // console.log(walk);
   })

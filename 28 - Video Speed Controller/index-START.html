@@ -20,15 +20,19 @@
   const video = document.querySelector('.flex');
 
   function handleSpeed(e) {
-    const y = e.pageY - this.offsetTop;
-    const percent = y / this.offsetHeight;
+    const pageY = e.pageY;
+    const top = this.offsetTop;
+    const y = e.pageY - this.offsetTop; // this will give you the coordinate of  where you are hovering on the speed container 
+    const offHeight = this.offsetHeight;
+    const percent = y / offHeight; // percentage for Ex - your marks / total marks
+    const height = Math.round(percent * 100) + '%';
     const min = 0.4;
     const max = 4;
-    const height = Math.round(percent * 100) + '%';
     const playbackRate = percent * (max - min) + min;
     bar.style.height = height;
     bar.textContent = playbackRate.toFixed(2) + 'x';
     video.playbackRate = playbackRate;
+    console.log({pageY, top, y, offHeight, percent, height, playbackRate});
   }
 
   speed.addEventListener('mousemove', handleSpeed)
